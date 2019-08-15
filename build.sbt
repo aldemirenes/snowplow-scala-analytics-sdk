@@ -23,6 +23,7 @@ lazy val root = project.in(file("."))
   .settings(BuildSettings.buildSettings)
   .settings(BuildSettings.publishSettings)
   .settings(MimaSettings.mimaSettings)
+  .settings(ScoverageSettings.settings)
   .settings(Seq(
     shellPrompt := { _ => name.value + " > " }
   ))
