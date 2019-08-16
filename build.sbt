@@ -24,6 +24,9 @@ lazy val root = project.in(file("."))
   .settings(BuildSettings.publishSettings)
   .settings(MimaSettings.mimaSettings)
   .settings(ScoverageSettings.settings)
+  .settings(ScalaDocSettings.settings)
+  .enablePlugins(SiteScaladocPlugin)
+  .enablePlugins(GhpagesPlugin)
   .settings(Seq(
     shellPrompt := { _ => name.value + " > " }
   ))
